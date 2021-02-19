@@ -98,16 +98,4 @@ $(document).ready(function () {
     }
   });
 
-  $.ajax({
-    type: 'PUT',
-     url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks/4426/mark_complete?api_key=301',
-     dataType: 'json',
-     success: function (response, textStatus) {
-       console.log(response);
-     },
-     error: function (request, textStatus, errorMessage) {
-       console.log(errorMessage);
-     }
-   });
-
 });
