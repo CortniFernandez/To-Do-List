@@ -1,9 +1,26 @@
 $(document).ready(function () {
 
+  var getAndDisplayAllTasks = function () {
+    $.ajax({
+      type: 'GET',
+      url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks?api_key=301',
+      dataType: 'json',
+      success: function (response, textStatus) {
+        $('#todo-list').empty();
+        response.tasks.forEach(function (task) {
+          $('#todo-list').append('<p>' + task.content + '</p>');
+        })
+      },
+      error: function (request, textStatus, errorMessage) {
+        console.log(errorMessage);
+      }
+    });
+  }
+
   var createTask = function () {
     $.ajax({
       type: 'POST',
-      url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks?api_key=48',
+      url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks?api_key=301',
       contentType: 'application/json',
       dataType: 'json',
       data: JSON.stringify({
@@ -12,7 +29,8 @@ $(document).ready(function () {
         }
       }),
       success: function (response, textStatus) {
-        console.log(response);
+        $('#new-task-content').val('');
+        getAndDisplayAllTasks();
       },
       error: function (request, textStatus, errorMessage) {
         console.log(errorMessage);
@@ -24,5 +42,7 @@ $(document).ready(function () {
     e.preventDefault();
     createTask();
   });
-  
+
+  getAndDisplayAllTasks();
+
 });
