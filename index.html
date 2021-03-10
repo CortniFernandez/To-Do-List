@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>To Do List</title>
+  <title>Today's Tasks</title>
   <meta charset="utf-8">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" type="text/css" />
   <script src="application.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>To Do List</h2>
-        <button class="sort-btn" id="show-all">All Tasks</button><button class="sort-btn" id="show-completed">Finshed Tasks</button><button class="sort-btn" id="show-incomplete">Unfinished Tasks</button>
-        <div id="todo-list">
-        </div>
-        <form id="create-task">
-          <input id="new-task-content" type="text" placeholder="new task" required/>
-          <button>Create</button>
-        </form>
+  <div class="page-box">
+    <div class="content-box">
+      <h2 id="title">Today's Tasks</h2>
+      <button class="sort-btn" id="show-all">All Tasks</button><button class="sort-btn" id="show-completed">Finshed Tasks</button><button class="sort-btn" id="show-incomplete">Unfinished Tasks</button>
+      <div id="todo-list">
       </div>
+      <form id="create-task">
+        <input id="new-task-content" type="text" placeholder="New task" required/>
+        <button>Create</button>
+      </form>
     </div>
   </div>
 </body>
