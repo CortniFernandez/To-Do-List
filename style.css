@@ -16,12 +16,14 @@ body {
   right: 30%;
   font-family: 'Caveat', cursive;
   font-size: 18pt;
+  text-shadow: 1px 1px 1px white;
 }
 #title {
   font-family: 'Dancing Script', cursive;
   font-size: 50pt;
-  color:rgba(238, 238, 238, 0.7);
+  color:rgba(238, 238, 238, 0.9);
   margin-bottom: 20px;
+  text-shadow: 2px 2px 5px black;
 }
 .delete {
   margin-left: 10px;
@@ -48,6 +50,12 @@ button {
   border-radius: 3px;
   border: 2px solid white;
   box-shadow: 2px 2px 5px white;
+}
+.footer {
+  position: fixed;
+  bottom: 1%;
+  left: 1%;
+  color: white;
 }
 /* media queries */
 
